@@ -1,0 +1,95 @@
+
+
+.eyebrow{
+    background: var(--color-background);
+    padding: 5px 10px;
+    border-radius: var(--radius-xl);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-background-dark);
+}
+
+.eyebrow-white{
+    background: var(--color-text-white);
+    padding: 5px 10px;
+    border-radius: var(--radius-xl);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.eyebrow-dark{
+    background: var(--color-background-dark);
+    padding: 5px 10px;
+    border-radius: var(--radius-xl);
+    width: fit-content;
+      display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.eyebrow-blur {
+    position: relative;
+    background: rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    color: var(--color-text-white);
+}
+.eyebrow-blur::before{
+    content:"";
+  position:absolute;
+  inset:-40%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0)
+  );
+  transform: rotate(15deg);
+  pointer-events:none;
+}
+.eyebrow-emty{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.point-eyebrow{
+    width: 7px;
+    height: 7px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-xl);
+}
+
+.white{
+    background-color: var(--color-text-white);
+}
+
+
+.btn--orange{
+    background: var(--color-background-btn);
+    border-radius: var(--radius-xl);
+}
+
+.row-img {
+    display: flex;
+    width: fit-content;
+}
+
+.row-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-xl);
+    object-fit: cover;
+}
+
+.row-img img:nth-child(2){
+ margin-left: -10px;
+}
+
+.row-img img:nth-child(3){
+ margin-left: -20px;
+}

@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Granger — Sportainment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/component.css" />
+    <link rel="stylesheet" href="styles/tokent.css" />
+    <meta
+      name="description"
+      content="A new species of sportainment. Improve your health + performance."
+    />
+  </head>
+
+  <body>
+    <!-- =========================================================
+    HEADER
+  ========================================================== -->
+    <header id="home" class="site-header">
+      <section id="home" class="hero">
+  <div class="container site-header__inner">
+        <div class="site-header__menu">
+          <a class="logo" href="#home" aria-label="Ir al inicio">granger</a>
+          <nav class="nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#program">Program</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#features">Scores</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#events">Events</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#about">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <button
+          type="button"
+          class="mode-toggle"
+          aria-label="Activar modo oscuro"
+          aria-pressed="false"
+          data-theme-toggle
+        >
+          <span class="mode-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+      </section>
+    
+    </header>
+
+    <main class="site-main">
+      <!-- =========================================================
+      HERO
+    ========================================================== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__top">
+          <p class="hero__kicker">CUSTOM WELLNESS</p>
+          <a class="btn btn--ghost" href="#contact">GET IN TOUCH</a>
+        </div>
+
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h2 id="hero-title" class="hero__title">
+              A new species of sportainment.
+            </h2>
+            <p class="hero__subtitle">
+              <i class="bi bi-award"></i>Improve your health + performance.
+            </p>
+          </div>
+
+          <div class="hero__media" aria-label="Imagen principal">
+            <img
+              class="hero__image"
+              src="assets/pelota.png"
+              alt="Balón de baloncesto sobre pista"
+            />
+          </div>
+        </div>
+
+        <!-- Texto grande decorativo -->
+        <div class="hero__brand" aria-hidden="true">Granger</div>
+      </section>
+
+      <!-- =========================================================
+      PROGRAM / BENEFIT
+    ========================================================== -->
+      <section
+        id="program"
+        class="section program"
+        aria-labelledby="program-title"
+      >
+        <div class="container program__grid">
+          <!-- Left card -->
+          <article class="card program__card program__card--benefit">
+            <header class="card__header">
+              <div class="eyebrow">
+                <div class="point-eyebrow"></div>
+                THE BENEFIT
+              </div>
+              <h2 id="program-title" class="h2">
+                Explore <span aria-hidden="true">🏀</span> our flexible
+                activity.
+              </h2>
+              <div class="chips" aria-label="Datos rápidos">
+                <span class="chip eyebrow-white"
+                  ><i class="bi bi-egg-fried"></i>Eating After the Game</span
+                >
+                <span class="chip eyebrow-white"
+                  ><i class="bi bi-controller"></i>12 Game Jersey</span
+                >
+              </div>
+            </header>
+
+            <div class="accordion" aria-label="Acordeón de beneficios">
+              <details class="accordion__item" open>
+                <summary class="accordion__title">
+                  Connections
+                  <span class="accordion__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="accordion__panel">
+                  <p>
+                    Built to connect — with people, purpose, and the momentum
+                    that moves you forward.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion__item">
+                <summary class="accordion__title">
+                  Sport Package
+                  <span class="accordion__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="accordion__panel">
+                  <p>
+                    A simple bundle of sessions, challenges and tracking to keep
+                    you consistent.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <!-- Right feature card -->
+          <article
+            class="card program__card program__card--feature"
+            aria-label="Bloque destacado"
+          >
+            <div class="card__header">
+              <div class="meta">
+                <span class="meta__item"
+                  ><i class="bi bi-disc"></i> EST — 1997</span
+                >
+                <p class="card__desc">
+                  Smart features designed to move with you — fast, flexible, and
+                  built for everyday action.
+                </p>
+              </div>
+
+              <div class="program__feature-copy">
+                <h3 class="h3">Vision Precision Play</h3>
+                <a class="btn btn--dark" href="#contact"
+                  ><span>Join Now</span> →</a
+                >
+              </div>
+            </div>
+
+            <div class="program__feature-media">
+              <span class="meta__item meta__pill"
+                ><i class="bi bi-gift"></i>February Sale</span
+              >
+              <div class="feature-media__footer">
+                <span>Tenis Outdor</span>
+                <div class="row">
+                  <big>86%</big>
+                  <small>Member</small>
+                </div>
+                <div class="features-burden">
+                  <i class="bi bi-lightning-charge-fill"></i> Boost
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      FEATURED / EXPERIENCE
+    ========================================================== -->
+      <section class="section featured" aria-labelledby="featured-title">
+        <div class="container featured__grid">
+          <div class="row-eyebrow">
+            <div class="box-eyebrow">
+              <p class="eyebrow">
+                <i class="bi bi-bullseye"></i>Virtual Challenges
+              </p>
+              <p class="eyebrow">
+                <i class="bi bi-trophy"></i>Community Tournaments
+              </p>
+            </div>
+            <div class="eyebrow">
+              <div class="point-eyebrow"></div>
+              THE PROGRAM
+            </div>
+          </div>
+
+          <header class="section__header featured__header">
+            <h2 id="featured-title" class="h2">
+              Elevate your <span aria-hidden="true">🏀</span> experience with
+              handpicked featured.
+            </h2>
+            <span class="featured__note"
+              >Your sports journey starts right here with us and the crew.</span
+            >
+          </header>
+
+          <div class="featured__cards">
+            <!-- Card 01 -->
+            <article class="card featured__card featured__card--count">
+              <div class="featured__count">
+                <div class="featured__count-bar">
+                  <span class="featured__count-num-big">01</span>
+                  <span class="featured__count-num">/08</span>
+                </div>
+
+                <span class="featured__count-help">Upcoming Event</span>
+              </div>
+
+              <div class="featured__controls" aria-label="Controles">
+                <button class="icon-btn" type="button" aria-label="Anterior">
+                  ←
+                </button>
+                <button
+                  class="icon-btn icon-btn--accent btn--orange"
+                  type="button"
+                  aria-label="Siguiente"
+                >
+                  →
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 02 -->
+            <article class="card featured__card featured__card--dark">
+              <h3 class="h3">
+                The coach experts <span class="row-img"><img src="assets/persona 1.jpg"> <img src="assets/persona 2.jpg"> <img src="assets/persona 3.jpg"></span> and simple software
+                <i class="bi bi-fast-forward"></i> for better sportainment.
+              </h3>
+
+              <div class="featured__badges">
+                <span class="chip"><i class="bi bi-broadcast"></i> Live</span>
+                <span class="chip">granger.com</span>
+              </div>
+            </article>
+
+            <!-- Card 03 -->
+            <article class="card featured__card featured__card--media">
+              <div class="featured__overlay">
+                <div class="featured__overlay-head">
+                  <p class="eyebrow eyebrow-blur">Sportcenter</p>
+                  <div class="eyebrow-blur featured-box">
+                    <span aria-hidden="true">🏀</span>
+                    <span class="features-big">2.88k</span>
+                    <span class="features-small">Membership</span>
+                  </div>
+                </div>
+                <div class="featured__overlay-content">
+                  <div class="column">
+                    <div class="row-img"><img src="assets/persona 1.jpg"> <img src="assets/persona 2.jpg"> <img src="assets/persona 3.jpg"><span
+                      >1.20k <small>Membership</small></span
+                    >
+                  </div>
+                  <h3 class="h3">Chemistry Sports Partner</h3>
+                  <p class="small">NEW YORK, US</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      FEATURES / TRACKING
+    ========================================================== -->
+      <section
+        id="features"
+        class="section features"
+        aria-labelledby="features-title"
+      >
+        <div class="container features__grid">
+          <!-- Card: Activity (como la imagen) -->
+          <article class="stat-card" aria-label="Activity stats">
+            <div class="stat-card__white">
+              <header class="stat-card__top">
+                <div class="stat-card__title">
+                  <span class="stat-card__icon" aria-hidden="true">
+                    <!-- icono tipo "gota" -->
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 2s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span class="stat-card__label">Activity</span>
+                </div>
+
+                <span class="stat-card__pill" aria-label="Progress 87 percent"
+                  >87%</span
+                >
+              </header>
+
+              <div class="stat-card__value">
+                <span class="stat-card__number">2.780</span>
+                <span class="stat-card__unit">Cal</span>
+              </div>
+
+              <p class="stat-card__sub">You improved overall well-being</p>
+
+              <!-- Chart (simple SVG placeholder) -->
+              <div class="stat-card__chart" aria-hidden="true">
+                <svg
+                  viewBox="0 0 320 120"
+                  width="100%"
+                  height="120"
+                  role="img"
+                  aria-label=""
+                >
+                  <!-- dotted grid -->
+                  <defs>
+                    <pattern
+                      id="dots"
+                      x="0"
+                      y="0"
+                      width="10"
+                      height="10"
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <circle
+                        cx="1"
+                        cy="1"
+                        r="1"
+                        fill="rgba(17,24,39,0.08)"
+                      ></circle>
+                    </pattern>
+                    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="rgba(255,255,255,0.0)" />
+                      <stop offset="1" stop-color="rgba(255,255,255,1)" />
+                    </linearGradient>
+                  </defs>
+
+                  <rect
+                    x="0"
+                    y="0"
+                    width="320"
+                    height="120"
+                    fill="url(#dots)"
+                  ></rect>
+
+                  <!-- base line (gris) -->
+                  <path
+                    d="M0,82 C40,92 70,90 95,84 C120,78 140,72 160,78 C190,88 210,92 240,86 C270,80 290,72 320,78"
+                    fill="none"
+                    stroke="rgba(17,24,39,0.18)"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+
+                  <!-- highlight line (naranja) -->
+                  <path
+                    d="M105,78 C120,68 140,66 155,74 C170,82 185,84 200,78"
+                    fill="none"
+                    stroke="rgb(255,106,0)"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+
+                  <!-- point -->
+                  <circle cx="162" cy="74" r="8" fill="rgb(255,106,0)"></circle>
+                </svg>
+              </div>
+
+              <div class="stat-card__bottom">
+                <div class="stat-card__metric">
+                  <span class="stat-card__dot" aria-hidden="true"></span>
+                  <span class="stat-card__m-label">Walking</span>
+                  <div class="stat-card__m-value">
+                    <strong>127</strong> <span>Cal</span>
+                  </div>
+                </div>
+
+                <div class="stat-card__metric">
+                  <span class="stat-card__dot" aria-hidden="true"></span>
+                  <span class="stat-card__m-label">Running</span>
+                  <div class="stat-card__m-value">
+                    <strong>386</strong> <span>Cal</span>
+                  </div>
+                </div>
+
+                <div class="stat-card__metric">
+                  <span class="stat-card__dot" aria-hidden="true"></span>
+                  <span class="stat-card__m-label">Workout</span>
+                  <div class="stat-card__m-value">
+                    <strong>249</strong> <span>Cal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card features__card features__card--content">
+            <div class="section__header">
+              <div class="eyebrow">
+                <div class="point-eyebrow"></div>
+                FEATURED FEATURES
+              </div>
+              <h2 id="features-title" class="h2">
+                Stay motivated with activity
+                <span aria-hidden="true">🏀</span> tracking.
+              </h2>
+              
+            <ul class="feature-list" aria-label="Lista de funciones">
+              <li class="feature-list__item">
+                <button class="icon-btn" type="button" aria-label="Activity">
+                  ∞
+                </button>
+              </li>
+              <li class="feature-list__item">
+                <button class="icon-btn" type="button" aria-label="Nutrition">
+                  🍴
+                </button>
+              </li>
+              <li class="feature-list__item">
+                <button class="icon-btn" type="button" aria-label="Workouts">
+                  🏋️
+                </button>
+              </li>
+              <li class="feature-list__item">
+                <button class="icon-btn" type="button" aria-label="Recovery">
+                  💤
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="features__footer">
+            <div class="col"><p class="features__desc">
+              Record — activities to boost your performance.
+            </p>
+            <p class="features__note">WITH GPT-4.0</p>
+
+            <div class="features__actions">
+              <a class="btn btn--accent btn--orange" href="#program">→</a>
+              <a class="btn btn--ghost" href="#contact">View more</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="features-block"> 
+                <div class="eyebrow">
+                <div class="point-eyebrow"></div>
+                2025
+              </div>
+            <a class="btn btn-white">View More</a>
+            <span>COMMING SOON</span></div>
+            <div class="features-burden">
+                  <i class="bi bi-lightning-charge-fill"></i> Mood Boost
+                </div>
+          </div>
+            
+          </div>
+          
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      EVENTS
+    ========================================================== -->
+      <section
+        id="events"
+        class="section events"
+        aria-labelledby="events-title"
+      >
+        <div class="container events__grid">
+          <article class="events__content">
+            <header class="events__header">
+              <div class="eyebrow-dark">
+                <div class="point-eyebrow white"></div>
+                CURRENT EVENTS
+              </div>
+              <h2 id="events-title" class="h2">
+                To win over <span aria-hidden="true">🏀</span> sports-minded
+                consumers with products, own technology and excellence.
+              </h2>
+            </header>
+
+            <ul class="events__list" aria-label="Lista de eventos">
+              <li class="events__item">
+                <button class="events__btn" type="button">
+                  <span class="events__name">Online Fitness Challenge</span>
+                  <span class="events__action" aria-hidden="true">↗</span>
+                </button>
+              </li>
+
+              <li class="events__item events__item--highlight">
+                <button class="events__btn" type="button">
+                  <span class="events__name">Youth Sports Camp — 20yo</span>
+
+                  <span class="events__action" aria-hidden="true">↗</span>
+                </button>
+              </li>
+
+              <li class="events__item">
+                <button class="events__btn" type="button">
+                  <span class="events__name">Obstacle Course Race</span>
+                  <span class="events__action" aria-hidden="true">↗</span>
+                </button>
+              </li>
+
+              <li class="events__item">
+                <button class="events__btn" type="button">
+                  <span class="events__name">Sport &amp; Game Day</span>
+                  <span class="events__action" aria-hidden="true">↗</span>
+                </button>
+              </li>
+
+              <li class="events__item">
+                <button class="events__btn" type="button">
+                  <span class="events__name">Trainer Meet &amp; Greet</span>
+                  <span class="events__action" aria-hidden="true">↗</span>
+                </button>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      TESTIMONIALS
+    ========================================================== -->
+      <section
+        id="testimonials"
+        class="section testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <header class="section__header testimonials__header container">
+          <h2 id="testimonials-title" class="h2">
+            What people are honestly saying right now
+          </h2>
+          <div class="eyebrow-colum">
+            <div class="eyebrow-white">
+              <div class="point-eyebrow"></div>
+              <span>Testimonial</span>
+            </div>
+            <div class="eyebrow-white">
+              <i class="bi bi-chat"></i> Customer Says
+            </div>
+          </div>
+        </header>
+        <div class="container testimonials__grid">
+          <article class="card testimonials__card">
+            <div class="testimonials__quote">
+              <p>
+                “The activity tracker keeps me on track, and the community
+                pushes me to keep going. It’s the perfect mix of fun and
+                fitness.”
+              </p>
+            </div>
+
+            <div class="testimonials__rating" aria-label="Valoración 4.5 de 5">
+              <span aria-hidden="true">★★★★★</span>
+              <span class="small">4.5</span>
+            </div>
+
+            <div class="testimonials__meta">
+              <div class="column">
+                <p class="testimonials__name">Benedeta Chan</p>
+                <p class="small">Housewife in China</p>
+              </div>
+              <button
+                class="icon-btn icon-btn--accent btn--orange"
+                type="button"
+                aria-label="Siguiente testimonio"
+              >
+                →
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card testimonials__promo"
+            aria-label="Tarjeta promocional"
+          >
+            <div class="column">
+              <p class="eyebrow">
+                <i class="bi bi-gear-wide-connected"></i> Professional Trainer
+              </p>
+              <p class="eyebrow"><i class="bi bi-gift"></i> Merchandise</p>
+            </div>
+
+            <h2 class="testimonials-card__tilte">Single Session</h2>
+            <span class="texto__testimonials"
+              >Indivialized Traineing - Beginner</span
+            >
+            <div class="testimonials__price">$99<small>/Session</small></div>
+            <div class="testimonials__promo-footer">
+              <div class="eyebrow-emty">
+                <div class="point-eyebrow white"></div>
+                <span>FULL GAME</span>
+              </div>
+              <button
+                class="icon-btn icon-btn--accent"
+                type="button"
+                aria-label="Siguiente testimonio"
+              >
+               <div class="cicle">↗</div>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      ABOUT / FOOTER TOP
+    ========================================================== -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <article class="card about__card about__card--cta">
+            <div class="explore-box">
+              <div class="eyebrow-emty"><div class="point-eyebrow white"></div><span>NEW EXPERIENCE</span></div>
+            <a class="btn btn--accent" href="#program">Explore more <div class="cicle">↗</div></a>
+            </div>
+            <div class="col">
+                          <h2 id="about-title" class="h2">
+              We’re doing everything for future healthiness.
+            </h2>
+            
+            <div class="about__bullets">
+              <div class="eyebrow"><i class="bi bi-bicycle"></i> Trainer & Coach Access</div>
+              <div class="eyebrow"><i class="bi bi-lightning-charge"></i>Pririty Event</div>
+              <div class="eyebrow"><i class="bi bi-award"></i>Badges</div>
+            </div>
+            </div>
+
+            <div class="link-about__box">
+
+              <div class="about__col">
+                <p class="small">Program</p>
+                <p class="small">Product</p>
+                <p class="small">Event</p>
+                <p class="small">About</p>
+              </div>
+
+              <div class="about__col">
+                <p class="small">Twitter</p>
+                <p class="small">Instagram</p>
+                <p class="small">LinkedIn</p>
+              </div>
+            </div>
+
+
+
+          </article>
+
+          <div class="about__footer">
+            <div class="about__cols">
+              <div class="about__col">
+                <p class="small">San Diego — California</p>
+                <p class="small">Paris — France</p>
+              </div>
+
+
+              <div class="about__col" id="contact">
+                <p class="small">hello@granger.com</p>
+                <p class="small">© 2025 Design by Granger</p>
+              </div>
+            </div>
+
+            <div class="about__legal">
+              <a class="small" href="#">Privacy Policy</a>
+              <a class="small" href="#">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+    GLOBAL FOOTER BRAND
+  ========================================================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+      <div class="container site-footer__inner">
+        <p class="site-footer__brand" aria-hidden="true">Granger</p>
+        <div class="row">
+          <div class="row-eyebrow">
+            <div class="eyebrow"><i class="bi bi-lightning-charge"></i> Website Attachement</div>
+            <div class="eyebrow"><i class="bi bi-cookie"></i>Resources</div>
+          </div>
+                  <p class="small">© 2025 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

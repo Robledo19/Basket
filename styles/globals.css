@@ -1,0 +1,328 @@
+/*
+  Base CSS para la web (GLOBAL)
+  - Variables en :root
+  - Reset ligero y box-sizing
+  - Tipografías responsivas con clamp()
+  - Utilidades: contenedor, helpers, botones, tarjetas
+  - Temas: light / dark (clases aplicables en <html> o <body>)
+*/
+
+/* ==========================
+  Variables (Design System)
+========================== */
+:root {
+  /* Colors (RGB parts) */
+  --color-bg: 255 255 255;
+  --color-surface: 250 250 251;
+  --color-text-white: #ffff;
+  --color-text-dark: #232323;
+  --color-grey: #909090;
+
+  --color-primary: #35acca;      /* green-500 */
+  --color-primary-600: #15803d;  /* green-700 */
+  --color-accent: #6366f1; 
+  --color-white-background: #fbfbfb; 
+  --color-background: #f5f6fb; 
+  --color-background-dark: #101010;   
+  --color-background-btn: #ff4c00;
+
+  /* Semantic */
+  --primary: 34 197 94;
+  --danger: 239 68 68;
+  --success: 16 185 129;
+  --warning: 234 179 8;
+
+  /* Border token (RGB parts) */
+  --color-border: 2 6 23;
+
+  /* Typography */
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+
+    /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 999px;
+
+  /* Sizing */
+  --container-max: 1200px;
+  --gutter: 1.6rem;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(2,6,23,0.06);
+  --shadow-md: 0 6px 20px rgba(2,6,23,0.08);
+
+  /* Motion */
+  --ease: cubic-bezier(.2,.9,.3,1);
+
+  /* Breakpoints (documentación; NO se usan en @media) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+}
+
+/* Dark theme overrides (add class `theme-dark` to <html> or <body>) */
+.theme-dark {
+  --color-bg: 17 24 39;
+  --color-surface: 30 41 59;
+  --color-text: 244 244 245;
+  --color-muted: 148 163 184;
+  --color-border: 148 163 184;
+}
+
+/* ==================
+  Reset / Base
+================== */
+:where(html, body) {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-sans);
+  line-height: 1.4;
+  background-color: rgb(var(--color-bg));
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: rgb(var(--color-bg));
+}
+
+/* Responsive root font-size (optional): adjust for easier rem math */
+@media (min-width: 1024px) { html { font-size: 18px; } }
+
+/* Remove default spacing for common elements */
+h1,h2,h3,h4,h5,h6,p,ul,ol,figure,blockquote { margin: 0; }
+ul,ol { padding-left: 1.2rem; }
+li{list-style: none; padding: 0; margin: 0;}
+/* Links */
+a { color: inherit; }
+a:focus-visible { outline: 3px solid rgba(99,102,241,0.35); outline-offset: 2px; }
+
+/* Images and media */
+img,video,svg { max-width: 100%; height: auto; display: block; }
+
+/* Form elements */
+input,textarea,select,button { font: inherit; }
+button { color: inherit; }
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.focus-ring:focus { outline: 3px solid rgba(99,102,241,0.25); outline-offset: 2px; }
+
+/* ==================
+  Typography
+================== */
+h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.08; font-weight: 600; }
+h3 { font-size: 1.125rem; line-height: 1.2; font-weight: 600; }
+a { text-decoration: none; }
+
+p { font-size: clamp(1rem, 1.4vw, 1.125rem); }
+
+/* Helpers */
+.muted { color: rgb(var(--color-muted)); }
+.small { font-size: .875rem; color: rgb(var(--color-muted)); }
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgb(var(--color-muted));
+}
+
+/* ==================
+  Layout utilities
+================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+}
+
+
+
+/* Utilities flex (ojo: clase genérica) */
+.row { display: flex; flex-wrap: wrap; gap: var(--gutter); }
+.col { flex: 1 1 0; min-width: 0; }
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Centering helpers */
+.center { display: flex; align-items: center; justify-content: center; }
+
+/* Stack helper */
+.stack > * + * { margin-top: 1rem; }
+
+/* Simple grid */
+.grid { display: grid; gap: var(--gutter); }
+
+/* IMPORTANTE: no usar var() dentro de @media */
+@media (min-width: 768px) {
+  .grid-cols-2 { grid-template-columns: repeat(2,1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(3,1fr); }
+}
+
+/* Spacing por secciones */
+.section { padding: 3rem 0; }
+@media (min-width: 1024px) { .section { padding: 4.5rem 0; } }
+
+/* Small responsive tweaks */
+@media (max-width: 480px) { .container { padding-inline: 1rem; } }
+
+/* ==================
+  Components
+================== */
+.card {
+  overflow: hidden;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  border: 0;
+  background: linear-gradient(90deg, rgb(var(--primary)), rgb(var(--color-primary-600)));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .12s var(--ease), box-shadow .12s var(--ease), opacity .12s var(--ease);
+}
+.btn:hover { box-shadow: var(--shadow-md); }
+.btn:active { transform: translateY(1px); }
+
+/* Compat con tu clase antigua */
+.btn-ghost,
+.btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(var(--color-border), 0.12);
+  box-shadow: none;
+  text-decoration: underline;
+  padding-right: 0;
+}
+.btn-ghost:hover,
+.btn--ghost:hover { box-shadow: none; opacity: .9; }
+
+.btn--accent {
+  background: rgb(var(--color-accent));
+  color: #fff;
+}
+.btn--dark {
+  background: rgb(17 24 39);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.theme-dark .btn--dark {
+  background: rgb(244 244 245);
+  color: rgb(17 24 39);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  background: rgba(var(--primary), 0.08);
+  color: rgb(var(--primary));
+}
+
+/* Chips / Tags (usadas en tu HTML) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  background: rgba(var(--color-border), 0.04);
+  /* border: 1px solid; */
+}
+.theme-dark .chip {
+  background: rgba(244,244,245,0.08);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .3rem .6rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  background: rgba(var(--primary), 0.10);
+  color: rgb(var(--primary));
+}
+.tag--dot::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: rgb(var(--primary));
+  display: inline-block;
+}
+
+/* Icon button */
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(var(--color-border), 0.12);
+  background: var(--color-white-background);
+  cursor: pointer;
+  transition: transform .12s var(--ease), opacity .12s var(--ease);
+}
+.icon-btn:active { transform: translateY(1px); }
+.icon-btn--accent {
+  background: rgb(var(--color-accent));
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: .7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(var(--color-border), 0.12);
+  background: transparent;
+}
+.input:focus-visible {
+  outline: 3px solid rgba(99,102,241,0.25);
+  outline-offset: 2px;
+}
+
+/* ==================
+  Utility classes
+================== */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: .4rem; }
+.mb-2 { margin-bottom: .8rem; }
+.mb-3 { margin-bottom: 1.6rem; }
+
+.px-0 { padding-left: 0; padding-right: 0; }
+
+/* End of base CSS */

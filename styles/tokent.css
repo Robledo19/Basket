@@ -1,0 +1,613 @@
+/* ==================
+Body
+================== */
+body{
+    background-color: var(--color-background);
+    padding-bottom: 2rem;
+}
+/* ==================
+Hero
+================== */
+
+#home {
+    position: fixed;
+    padding: 1rem;
+    color: var(--color-text-white);
+     width: -webkit-fill-available;
+     z-index: 999;
+    border-bottom: var(--color-text-white) 1px solid;
+}
+
+.site-header__menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
+.hero {
+    background: url('../assets/fondo_hero.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text-white);
+      position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.site-header__menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+.nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+.hero__top {padding-top: 4rem;display: flex;justify-content: space-between;align-items: center;}
+
+.hero__grid {
+    padding-top: 8rem;
+}
+.hero__image {
+    position: absolute;
+     /* Posición base */
+  top: 50%;
+  left: 68%;
+  /* Ajuste fino visual */
+  transform: translate(-50%, -50%);
+  /* Tamaño fluido */
+  width: clamp(220px, 32vw, 60rem);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__brand {
+  font-size: clamp(8rem, 25vw, 32rem);
+  white-space: nowrap;
+}
+
+#hero-title {
+    max-width: 16ch;
+    padding-bottom: 1rem;
+}
+.hero__subtitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 90%;
+}
+.bi-award {
+    background-color: #fd9502;
+    border-radius: var(--radius-xl);
+    width: 26px;
+    display: flex;
+    height: 26px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==================
+BENEFIT
+================== */
+
+
+.program__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-content: space-between;
+}
+
+#program-title {text-wrap-style: balance;padding-bottom: 1rem;}
+
+.chips {
+    padding-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+details.accordion__item {
+    background-color: var(--color-white-background);
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+}
+
+article.card.program__card.program__card--feature {
+    background-color: var(--color-white-background);
+    border-radius: var( --radius-lg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.program__feature-media{
+    background: url('../assets/tenis.png');
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.program__feature-media {
+    background: url(../assets/tenis.png);
+    width: -webkit-fill-available;
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span.meta__item.meta__pill {
+    background-color: var(--color-background);
+    border-radius: var(--radius-xl);
+    padding: 4px 8px;
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    font-size: 80%;
+    margin-right: 0;
+}
+
+.feature-media__footer {
+    background: var(--color-white-background);
+    border-radius: var(--radius-lg);
+    padding: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 70%;
+}
+
+.feature-media__footer .row {align-content: center;flex-wrap: nowrap;justify-content: center;gap: 10px;}
+
+.feature-media__footer small {
+    font-size: 70%;
+    display: contents;
+}
+
+.features-burden {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    width: -webkit-fill-available;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    font-size: 80%;
+}
+
+.program__feature-copy { display: grid; gap: 1rem; }
+
+/* ==================
+EXPERIENCE
+================== */
+section.section.featured {
+    background-color: var(--color-white-background);
+      max-width: var(--container-max);
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+
+}
+
+.row-eyebrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-eyebrow {
+    display: flex;
+    gap: 10px;
+}
+.section__header.featured__header {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+}
+
+.featured__cards {
+    display: flex;
+    gap: 1rem;
+    min-height: 300px;
+}
+
+.featured__cards article.card {
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.card.featured__card.featured__card--count{
+    padding: 0;
+}
+
+span.featured__count-num-big {
+    font-size: 3rem;
+}
+
+span.featured__count-num {
+    color: var( --color-grey);
+}
+
+
+
+article.card.featured__card.featured__card--dark {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.card.featured__card.featured__card--media {
+    background: url(../assets/tenis2.png);
+    background-size: cover;
+        color: var(--color-text-white);
+
+}
+
+.featured__card h3 {
+    display: ruby;
+}
+
+.featured__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: -webkit-fill-available;
+}
+
+.featured__overlay-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.featured__badges {
+    display: flex;
+    justify-content: space-between;
+}
+.featured-box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+}
+
+.featured__overlay-content .row-img img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+span.features-big {
+    font-size: 120%;
+}
+
+span.features-small {
+    font-size: 75%;
+}
+
+
+/* ==================
+FEATURES
+================== */
+
+.container.features__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+article.stat-card{
+    background-image: url(../assets/baloncesto.png);
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    padding: 4rem;
+    background-position: center;
+}
+
+.stat-card__white {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    width: fit-content;
+    margin: auto;
+}
+
+header.stat-card__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-card__title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+span.stat-card__pill {
+    background-color: var(--color-background-btn);
+    color: var(--color-text-white);
+    border-radius: var(--radius-lg);
+    padding: 2px 10px;
+    font-size: 80%;
+}
+.stat-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p.stat-card__sub {
+    font-size: 80%;
+}
+
+ul.feature-list {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+article.card.features__card.features__card--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#features .section__header {
+    flex-direction: column;
+
+    display: flex;
+    gap: 0.8rem;
+}
+
+.features__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.features-block{
+    background: url(../assets/baloncesto\ 2.png);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-size: cover;
+    color: var(--color-text-white);
+    align-items: center;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* ==================
+EVENTS
+================== */
+
+.events__grid {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+}
+
+header.events__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+h2#events-title {
+    max-width: 30ch;
+}
+
+.events__btn {
+    background-color: var(--color-background-dark);
+    border: none;
+        display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+}
+
+ul.events__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* ==================
+Testimonials
+================== */
+
+header.section__header.testimonials__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+h2#testimonials-title {
+    max-width: 22ch;
+}
+
+.eyebrow-colum {
+    display: grid;
+    gap: 0.5rem;
+    justify-content: end;
+    text-align: left;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-items: end;
+}
+
+.container.testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card.testimonials__card {
+    background-color: var(--color-white-background);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.testimonials__promo{
+    background-image: url(../assets/tenis3.png);
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    color: var(--color-text-white);
+    padding: 2rem;
+}
+
+h2.testimonials-card__tilte {
+    text-align: center;
+    padding: 2rem 0rem 1rem;
+}
+
+span.texto__testimonials {
+    text-align: center;
+    width: auto;
+    display: block;
+}
+
+.testimonials__price {
+text-align: center;
+    margin: 2rem auto;
+    background: var(--color-white-background);
+    color: var(--color-text-dark);
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: var(--radius-lg);
+}
+
+.testimonials__meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonials__promo-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+/* ==================
+About
+================== */
+
+section#about {
+    padding-bottom: 0;
+}
+.container.about__grid {
+    background-color: var(--color-white-background);
+    padding: 2rem;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+article.card.about__card.about__card--cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.about__bullets {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.explore-box{
+    background: url(../assets/baloncesto\ 3.png);
+    padding: 1rem;
+    display: grid;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    min-height: 200px;
+    color: var(--color-text-white)
+}
+
+.link-about__box {
+    display: flex;
+    gap: 2rem;
+}
+
+.about__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    flex-direction: column;
+}
+
+.about__cols {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+div#contact {
+    display: flex;
+    gap: 1rem;
+}
+
+.about__legal {
+    display: flex;
+    justify-content: space-between;
+    padding-top: .5rem;
+    border-top: 1px solid var(--color-grey);
+}
+
+/* ==================
+Footer
+================== */
+
+.site-footer__inner {
+    background: var(--color-white-background);
+    padding-bottom: 2rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+p.site-footer__brand {
+    font-size: clamp(8rem, 22vw, 32rem);
+    white-space: nowrap;
+}
+
+footer .row {justify-content: space-between;}
