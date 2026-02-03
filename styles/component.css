@@ -93,3 +93,68 @@
 .row-img img:nth-child(3){
  margin-left: -20px;
 }
+
+.mode-toggle{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+
+  display: inline-grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,0.35); /* sobre el fondo azul */
+  background: rgba(255,255,255,0.92);
+  color: #111827; /* icono */
+
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+
+  /* efecto “botón flotante” */
+  box-shadow:
+    0 10px 25px rgba(2,6,23,0.18),
+    0 2px 6px rgba(2,6,23,0.12);
+
+  transition: transform .15s var(--ease),
+              box-shadow .15s var(--ease),
+              background-color .15s var(--ease);
+}
+
+.mode-toggle:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 30px rgba(2,6,23,0.20),
+    0 3px 10px rgba(2,6,23,0.14);
+}
+
+.mode-toggle:active{
+  transform: translateY(0px);
+  box-shadow:
+    0 8px 18px rgba(2,6,23,0.16),
+    0 2px 6px rgba(2,6,23,0.12);
+}
+
+.mode-toggle:focus-visible{
+  outline: 3px solid rgba(99,102,241,0.35);
+  outline-offset: 3px;
+}
+
+/* Icono */
+.mode-toggle__icon{
+  font-size: 16px;
+  transform: translateY(-0.5px); /* micro-ajuste para centrar visualmente */
+}
+
+/* Estado ON (cuando aria-pressed="true") */
+.mode-toggle[aria-pressed="true"]{
+  background: rgba(16,16,16,0.85);
+  color: #fff;
+  border-color: rgba(255,255,255,0.22);
+}
+
+/* Si estás en theme-dark, puedes mantenerlo claro (como en la captura) */
+.theme-dark .mode-toggle{
+  background: rgba(255,255,255,0.92);
+  color: #111827;
+  border-color: rgba(255,255,255,0.25);
+}
